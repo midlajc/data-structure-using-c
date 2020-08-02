@@ -28,7 +28,7 @@ for(i=0;i<=len1-len2;i++)
 {   
 	k=i;
 	for(j=0;j<len2;j++,k++)
-	   temp=temp+int(str[k]); 
+	   temp+=int(str[k]); 
 	if (temp==asval)
 		return i+1;
 	temp=0;		
