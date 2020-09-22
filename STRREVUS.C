@@ -5,7 +5,7 @@ void main()
 {
 char string[100],rev_string[100];
 char *temp;
-int array_length,i,j;
+int array_length,i;
 printf("insert a string(limit 100):");
 scanf("%[^\n]s",string);
 array_length=strlen(string);
