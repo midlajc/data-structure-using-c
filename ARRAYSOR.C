@@ -4,15 +4,16 @@
 #include <string.h>
 void main()
 {
-char string[10],temp;
-int i;
-printf("insert a string (10 elements):");
+char string[100],temp;
+int i,array_length;
+printf("insert a string (100 elements limit):");
 scanf("%s",string);
 printf("\ninserted string:%s",string);
-for(i=0;i<10;i++)
+array_length=strlen(string);
+for(i=0;i<array_length;i++)
 {
 int j;
-for(j=0;j<9;j++)
+for(j=0;j<array_length-1;j++)
 {
 if(string[j]>string[j+1])
 {
