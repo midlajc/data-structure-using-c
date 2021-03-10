@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "TDAIO.C": "cpp",
+        "2DEFI.C": "cpp",
+        "ARRAYINI.C": "cpp",
+        "ARRAYSOR.C": "cpp",
+        "IOINARRA.C": "cpp",
+        "DELELE.C": "cpp",
+        "DATAREPL.C": "cpp",
+        "MINMAX.C": "cpp",
+        "name_organizer.C": "cpp",
+        "STRREVUS.C": "cpp"
+    }
+}

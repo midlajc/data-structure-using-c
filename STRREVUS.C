@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include <string.h>
-void main()
+int main()
 {
-    char string[100], rev_string[100];
-    char *temp;
-    int array_length, i;
-    printf("insert a string(limit 100):");
+    char string[30], rev_string[30];
+    int i;
+    printf("Enter a String:");
     scanf("%[^\n]s", string);
-    array_length = strlen(string);
-    temp = string;
-    for (i = 0, temp += array_length - 1; i < array_length; i++, temp--)
+    strlen(string);
+    for (i = 0; *string+i!='\0'; i++)
     {
-        rev_string[i] = *temp;
+        rev_string[strlen(string)-i-1] = *string+i;
     }
-    rev_string[array_length] = '\0';
+    rev_string[i] = '\0';
     printf("\nreverse of enterd string: %s", rev_string);
-    getch();
-    clrscr();
 }
