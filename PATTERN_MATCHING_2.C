@@ -3,7 +3,7 @@
 void main()
 {
 	char string[20],pattern[5];
-	int i=0,j,string_length,pattern_length;
+	int i=0,j,string_length,pattern_length,flag=0;
 	clrscr();
 	printf("Enter a String:");
 	gets(string);
@@ -24,5 +24,7 @@ void main()
 		else
 			++i;
 	}
+	if(flag==1)
+		printf("pattern not found");
 	getch();
 }

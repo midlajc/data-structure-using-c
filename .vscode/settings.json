@@ -9,6 +9,12 @@
         "DATAREPL.C": "cpp",
         "MINMAX.C": "cpp",
         "name_organizer.C": "cpp",
-        "STRREVUS.C": "cpp"
+        "STRREVUS.C": "cpp",
+        "STRING_REVERSE.C": "cpp",
+        "PATTERN_MATCHING_2.C": "cpp",
+        "MATRIXSEARCH.C": "cpp",
+        "MERGEARRAY.C": "cpp",
+        "PATTER_MATCHING.C": "cpp",
+        "STRCMPI.C": "cpp"
     }
 }
