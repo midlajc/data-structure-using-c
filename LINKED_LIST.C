@@ -47,11 +47,13 @@ void insert()
 	{
               head=temp;
 	      tail=temp;
+	      tail->next=NULL;
 	}
 	else
 	{
-              tail->next=temp;
+	      tail->next=temp;
 	      tail=temp;
+	      tail->next=NULL;
 	}
 }
 
@@ -63,11 +65,12 @@ void display()
 	else
 	{
 		printf("\nLinked List:");
-	        while(temp!=NULL)
+		printf("%u",temp);
+		while(temp!=NULL)
 		{
-			printf("%d->",temp->data);
+			printf("->[%d|%u]",temp->data,temp->next);
 			temp=temp->next;
 		}
-		printf("NULL\n");
+		printf("\n");
 	}
 }
