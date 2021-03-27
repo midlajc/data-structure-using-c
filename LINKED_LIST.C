@@ -16,7 +16,7 @@ void main()
 	int choice;
 	clrscr();
 	while(1)
-	{
+    {
 	      printf("\n");
 	      printf("1.Insert\n");
 	      printf("2.Display\n");
@@ -24,7 +24,7 @@ void main()
 	      printf("Enter your choice:");
 	      scanf("%d",&choice);
 	      switch(choice)
-	      {
+          {
 		      case 1:
 			      insert();
 			      break;
@@ -33,8 +33,9 @@ void main()
 			      break;
 		      case 3:
 			      exit(0);
-	      }
-	}
+    
+          }
+    }
 }
 
 void insert()
@@ -46,8 +47,8 @@ void insert()
 	if(head==NULL)
 	{
               head=temp;
-	      tail=temp;
-	      tail->next=NULL;
+              tail=temp;
+              tail->next=NULL;
 	}
 	else
 	{
@@ -64,8 +65,7 @@ void display()
 		printf("\nNo Elements Found\n");
 	else
 	{
-		printf("\nLinked List:");
-		printf("%u",temp);
+		printf("\nLinked List: %u",temp);
 		while(temp!=NULL)
 		{
 			printf("->[%d|%u]",temp->data,temp->next);
@@ -74,4 +74,3 @@ void display()
 		printf("\n");
 	}
 }
->>>>>>> bdad84b3cfc287c13fe89f7e2d05356cc4a7866b
