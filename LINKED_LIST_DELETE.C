@@ -3,6 +3,7 @@
 
 void display();
 void insert();
+void delete_node(int);
 
 struct linked_list{
 	int data;
@@ -13,25 +14,30 @@ struct linked_list *head=NULL,*tail=NULL;
 
 void main()
 {
-	int choice;
+	int choice,no_of_nodes=0;
 	clrscr();
 	while(1)
 	{
 	      printf("\n");
 	      printf("1.Insert\n");
-	      printf("2.Display\n");
-	      printf("3.Exit\n");
+	      printf("2.Delete\n");
+	      printf("3.Display\n");
+	      printf("4.Exit\n");
 	      printf("Enter your choice:");
 	      scanf("%d",&choice);
 	      switch(choice)
 	      {
 		      case 1:
 			      insert();
+			      no_of_nodes++;
 			      break;
 		      case 2:
-			      display();
+			      delete_node(no_of_nodes);
 			      break;
 		      case 3:
+			      display();
+			      break;
+		      case 4:
 			      exit(0);
 	      }
 	}
@@ -45,7 +51,7 @@ void insert()
 	scanf("%d",&temp->data);
 	if(head==NULL)
 	{
-              head=temp;
+	      head=temp;
 	      tail=temp;
 	      tail->next=NULL;
 	}
@@ -74,4 +80,33 @@ void display()
 		printf("\n");
 	}
 }
->>>>>>> bdad84b3cfc287c13fe89f7e2d05356cc4a7866b
+
+void delete_node(int no_of_nodes)
+{
+	int index,i;
+	struct linked_list *temp=head,*ptr;
+	printf("Enter Position of node:");
+	scanf("%d",&index);
+	if(index>no_of_nodes)
+		printf("\nonly %d element\n",no_of_nodes);
+	else
+	{
+	    if(index==1)
+	    {
+		head=head->next;
+		printf("\nNode Deleted Value=%d\n",temp->data);
+		free(temp);
+	    }
+	    else
+	    {
+		for(i=1;i<index;i++)
+		{
+			ptr=temp;
+			temp=temp->next;
+		}
+		ptr->next=temp->next;
+		printf("\nNode Deleted Value=%d\n",temp->data);
+		free(temp);
+	    }
+	}
+}
