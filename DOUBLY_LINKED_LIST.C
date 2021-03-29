@@ -1,6 +1,7 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
+void display_back();
 void display();
 void insert();
 
@@ -21,7 +22,8 @@ void main()
 	      printf("\n");
 	      printf("1.Insert\n");
 	      printf("2.Display\n");
-	      printf("3.Exit\n");
+	      printf("3.Display Back\n");
+	      printf("4.Exit\n");
 	      printf("Enter your choice:");
 	      scanf("%d",&choice);
 	      switch(choice)
@@ -33,6 +35,9 @@ void main()
 			      display();
 			      break;
 		      case 3:
+			      display_back();
+			      break;
+		      case 4:
 			      exit(0);
 	      }
 	}
@@ -49,13 +54,15 @@ void insert()
 
 	      head=temp;
 	      tail=temp;
-	     // tail
+	      tail->next=NULL;
+	      head->prev=NULL;
 	}
 	else
 	{
 	      temp->prev=tail;
 	      tail->next=temp;
 	      tail=tail->next;
+	      tail->next=NULL;
 	}
 }
 
@@ -69,8 +76,24 @@ void display()
 		printf("\nLinked List: %u",temp);
 		while(temp!=NULL)
 		{
-			printf("->[%u,%d,%u]",temp->prev,temp->data,temp->next);
+			printf("->[%d,%u]",temp->data,temp->next);
 			temp=temp->next;
+		}
+	}
+}
+
+void display_back()
+{
+	struct linked_list *temp=tail;
+	if(head==NULL)
+		printf("\nNo Elements Found\n");
+	else
+	{
+		printf("\nLinked List: %u",temp);
+		while(temp!=NULL)
+		{
+			printf("->[%d,%u]",temp->data,temp->prev);
+			temp=temp->prev;
 		}
 	}
 }

@@ -8,7 +8,7 @@ int pop();
 
 struct stack{
 	int data;
-	struct stack *next;
+	struct stack *prev;
 };
 
 struct stack *top=NULL;
@@ -54,10 +54,11 @@ void push(int data)
 	if(top==NULL)
 	{
 	      top=temp;
+		  top->prev=NULL;
 	}
 	else
 	{
-	      temp->next=top;
+	      temp->prev=top;
 	      top=temp;
 	}
 }
@@ -68,11 +69,11 @@ int pop()
 	int data;
 	struct stack *temp=top;
 	if(top==NULL)
-		printf("\nNo Elements Found\n");
+		printf("\nStack Underflow\n");
 	else
 	{
 		data=temp->data;
-		top=top->next;
+		top=top->prev;
 		free(temp);
 	}
 	return data;
@@ -82,14 +83,14 @@ void display()
 {
 	struct stack *temp=top;
 	if(top==NULL)
-		printf("\nNo Elements Found\n");
+		printf("\nStack Underflow\n");
 	else
 	{
 		printf("\nStack: %u",temp);
 		while(temp!=NULL)
 		{
-			printf("->[%d,%u]",temp->data,temp->next);
-			temp=temp->next;
+			printf("->[%d,%u]",temp->data,temp->prev);
+			temp=temp->prev;
 		}
 	}
 }

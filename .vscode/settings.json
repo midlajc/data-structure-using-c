@@ -15,6 +15,10 @@
         "MATRIXSEARCH.C": "cpp",
         "MERGEARRAY.C": "cpp",
         "PATTER_MATCHING.C": "cpp",
-        "STRCMPI.C": "cpp"
+        "STRCMPI.C": "cpp",
+        "DOUBLY_LINKED_LIST.C": "cpp",
+        "SMRTBACK.C": "cpp",
+        "LINKED_LIST_DELETE.C": "cpp",
+        "STACK_LINKED.C": "cpp"
     }
 }
