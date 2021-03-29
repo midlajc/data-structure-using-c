@@ -5,7 +5,7 @@ int pop();
 void display();
 void push(int);
 
-int *stack,ptr=-1,total_elements=2;
+int *stack,ptr=-1,total_elements=10;
 
 void main()
 {
@@ -30,7 +30,8 @@ void main()
 			      break;
 		      case 2:
 			      data=pop();
-			      printf("Data: %d",data);
+			      if(data!=0)
+				printf("\nData: %d\n",data);
 			      break;
 		      case 3:
 			      display();
@@ -43,7 +44,7 @@ void main()
 
 void push(int data)
 {
-	if(ptr>total_elements)
+	if(ptr>=total_elements-1)
 	{
 		/*printf("%d ",sizeof(stack));
 		stack=realloc(stack,sizeof(stack));
@@ -79,5 +80,15 @@ void display()
 
 int pop()
 {
-	return;
+	int data;
+	if(ptr==-1)
+		printf("\nStack Underflow\n");
+	else
+	{
+		data=*(stack+ptr);
+		*(stack+ptr)=NULL;
+		ptr--;
+		return data;
+	}
+	return 0;
 }
