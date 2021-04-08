@@ -14,10 +14,10 @@ void display(int *array,int size)
 void mergeArray(int *array1,int *array2,int *result,int size1,int size2)
 {
 	int i,j;
-	for(i=1;i<size1;i++)
+	for(i=0;i<size1;i++)
 		*(result+i)=*(array1+i);
 	for(j=0;j<size2;i++,j++)
-		*(result+i)=*(array2+i);
+		*(result+i)=*(array2+j);
 }
 void main()
 {

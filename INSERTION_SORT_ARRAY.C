@@ -15,7 +15,7 @@ void main()
 	for(i=1;i<num;i++)
 	{
 		key=array[i];
-		for(j=i-1;j>=0&&array[j]>key;j=j-1)
+		for(j=i-1;j>=0&&array[j]>key;j--)
 		{
 			array[j+1]=array[j];
 		}

@@ -18,7 +18,7 @@ void main()
 			if(sear_ele==array[i][j])
 			{
 				flag=0;
-				printf("\nelement Found at position (%dx%d):",i+1,j+1);
+				printf("\nelement Found at position (%dx%d)",i+1,j+1);
 			}
 	if(flag==1)
 		printf("Element not Found");

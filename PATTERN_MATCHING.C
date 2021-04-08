@@ -20,11 +20,12 @@ void main()
 		{
 			printf("pattern found at position %d\n",i+1);
 			i+=j;
+			flag=1;
 		}
 		else
 			++i;
 	}
-	if(flag==1)
+	if(flag==0)
 		printf("pattern not found");
 	getch();
 }

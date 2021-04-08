@@ -3,7 +3,7 @@
 
 void display();
 void push(int);
-int pop();
+void pop();
 
 
 struct stack{
@@ -34,8 +34,8 @@ void main()
 			      push(data);
 			      break;
 		      case 2:
-			      data=pop();
-			      printf("\nData:%d\n",data);
+			      pop();
+			      //printf("\nData:%d\n",data);
 			      break;
 		      case 3:
 			      display();
@@ -64,7 +64,7 @@ void push(int data)
 }
 
 
-int pop()
+void pop()
 {
 	int data;
 	struct stack *temp=top;
@@ -75,8 +75,8 @@ int pop()
 		data=temp->data;
 		top=top->prev;
 		free(temp);
+		printf("\nDATA: %d\n",data);
 	}
-	return data;
 }
 
 void display()

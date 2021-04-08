@@ -1,7 +1,7 @@
 #include <stdio.h>
 void main()
 {
-	int i,array[10],size,sear_ele;
+	int i,array[10],size,sear_ele,flag=0;
 	clrscr();
 	printf("Enter number of elements:");
 	scanf("%d",&size);
@@ -13,10 +13,10 @@ void main()
 	for(i=0;i<size;i++)
 		if(array[i]==sear_ele)
 		{
-			printf("Element Found at position %d",i+1);
-			break;
+			printf("Element Found at position %d\n",i+1);
+			flag=1;
 		}
-	if(i>size-1)
+	if(flag==0)
 		printf("Element not Found");
 	getch();
 }
