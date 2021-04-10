@@ -33,6 +33,7 @@ void main()
 	printf("Enter Second array elements:");
 	getArray(array2,size2);
 	mergeArray(array1,array2,result,size1,size2);
+	printf("\nMerged Array: ");
 	display(result,size1+size2);
 	getch();
 }

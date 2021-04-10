@@ -19,6 +19,12 @@
         "DOUBLY_LINKED_LIST.C": "cpp",
         "SMRTBACK.C": "cpp",
         "LINKED_LIST_DELETE.C": "cpp",
-        "STACK_LINKED.C": "cpp"
+        "STACK_LINKED.C": "cpp",
+        "PATTERN_MATCHING.C": "cpp",
+        "MERGE_ARRAY.C": "cpp",
+        "STACK_ARRAY.C": "cpp",
+        "SELECTION_SORT_ARRAY.C": "cpp",
+        "LINEAR_SEARCH.C": "cpp",
+        "SPARSE_MATRIX_REPRESENTATION.C": "cpp"
     }
 }
