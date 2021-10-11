@@ -7,11 +7,11 @@ void push(int);
 
 int *stack,ptr=-1,total_elements=10;
 
-void main()
+int main()
 {
 	int choice,data;
 	stack=(int *)calloc(total_elements,sizeof(int));
-	clrscr();
+	// clrscr();
 	while(1)
 	{
 	      printf("\n");
@@ -86,7 +86,7 @@ int pop()
 	else
 	{
 		data=*(stack+ptr);
-		*(stack+ptr)=NULL;
+		*(stack+ptr)=0;
 		ptr--;
 		return data;
 	}

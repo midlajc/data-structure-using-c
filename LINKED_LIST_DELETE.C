@@ -12,10 +12,10 @@ struct linked_list{
 
 struct linked_list *head=NULL,*tail=NULL;
 
-void main()
+int main()
 {
 	int choice,no_of_nodes=0;
-	clrscr();
+	//clrscr();
 	while(1)
 	{
 	      printf("\n");

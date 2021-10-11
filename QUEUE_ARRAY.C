@@ -7,11 +7,11 @@ void deQueue();
 
 int *queue,rear=-1,total_elements=10;
 
-void main()
+int main()
 {
 	int choice;
 	queue=(int *)calloc(total_elements,sizeof(int));
-	clrscr();
+	// clrscr();
 	printf("**----Queue Using Array----**\n");
 	while(1)
 	{

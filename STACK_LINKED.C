@@ -3,7 +3,7 @@
 
 void display();
 void push(int);
-void pop();
+int pop();
 
 
 struct stack{
@@ -13,10 +13,10 @@ struct stack{
 
 struct stack *top=NULL;
 
-void main()
+int	 main()
 {
 	int choice,data;
-	clrscr();
+	// clrscr();
 	while(1)
 	{
 	      printf("\n");
@@ -34,8 +34,9 @@ void main()
 			      push(data);
 			      break;
 		      case 2:
-			      pop();
-			      //printf("\nData:%d\n",data);
+			      data=pop();
+			      if(data!=0)
+				  	printf("\nData:%d\n",data);
 			      break;
 		      case 3:
 			      display();
@@ -64,7 +65,7 @@ void push(int data)
 }
 
 
-void pop()
+int pop()
 {
 	int data;
 	struct stack *temp=top;
@@ -75,8 +76,10 @@ void pop()
 		data=temp->data;
 		top=top->prev;
 		free(temp);
-		printf("\nDATA: %d\n",data);
+		// printf("\nDATA: %d\n",data);
+		return data;
 	}
+	return 0;
 }
 
 void display()

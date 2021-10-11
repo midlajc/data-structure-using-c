@@ -25,6 +25,7 @@
         "STACK_ARRAY.C": "cpp",
         "SELECTION_SORT_ARRAY.C": "cpp",
         "LINEAR_SEARCH.C": "cpp",
-        "SPARSE_MATRIX_REPRESENTATION.C": "cpp"
+        "SPARSE_MATRIX_REPRESENTATION.C": "cpp",
+        "BINARY_SEARCH_ADV.C": "cpp"
     }
 }

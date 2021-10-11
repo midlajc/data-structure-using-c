@@ -12,10 +12,10 @@ struct queue{
 
 struct queue *front=NULL,*rear=NULL;
 
-void main()
+int main()
 {
 	int choice,data;
-	clrscr();
+	// clrscr();
 	while(1)
 	{
 	      printf("\n");
